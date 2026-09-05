@@ -1,0 +1,27 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+  % axes
+  \draw[->, thick] (0,0) -- (8,0) node[right] {$x$ (prey)};
+  \draw[->, thick] (0,0) -- (0,5.2) node[above] {$y$ (predator)};
+  % posisi nullcline (skematik)
+  \def\xa{5} % x = c/d
+  \def\ya{2.8} % y = a/b
+  % nullclines
+  \draw[dashed, red!80!black, thick] (\xa,0) -- (\xa,5) node[above] {$x=\tfrac{c}{d}$};
+  \draw[dashed, red!80!black, thick] (0,\ya) -- (8,\ya) node[right] {$y=\tfrac{a}{b}$};
+  % equilibrium
+  \filldraw[black] (\xa,\ya) circle (2.5pt) node[above right] {$E_2\left(\tfrac{c}{d},\tfrac{a}{b}\right)$};
+  \filldraw[black] (0,0) circle (2pt) node[below left] {$E_1(0,0)$};
+  % closed orbit (skematik)
+  \draw[thick,blue!80!black,domain=0:360,samples=200,variable=\t]
+    plot({\xa+1.5*cos(\t)},{\ya+0.9*sin(\t r)});
+  \draw[->,blue!80!black,thick] (\xa+1.5, \ya) -- ++(0,0.3);
+  \draw[thick,blue!60!black,domain=0:360,samples=200,variable=\t]
+    plot({\xa+2.5*cos(\t)},{\ya+1.5*sin(\t r)});
+  \draw[->,blue!60!black,thick] (\xa+2.5, \ya) -- ++(0,0.4);
+\end{tikzpicture}
+\end{document}

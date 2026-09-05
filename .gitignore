@@ -1,0 +1,12 @@
+.DS_Store
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+texput.log
+_minted*/
+*.nav
+*.snm
+*.vrb
+*.lyx~

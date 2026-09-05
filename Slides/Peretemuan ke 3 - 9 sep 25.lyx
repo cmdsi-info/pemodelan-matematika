@@ -1,0 +1,224 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Pertumbuhan populasi tanpa batas
+\end_layout
+
+\begin_layout Itemize
+Populasi 
+\begin_inset Formula $N\left(t\right)$
+\end_inset
+
+ bertambah seiring waktu 
+\begin_inset Formula $t$
+\end_inset
+
+ dengan laju 
+\begin_inset Formula $r$
+\end_inset
+
+ yang sebanding dengan ukuran populasi itu sendiri.
+\begin_inset Formula 
+\[
+\frac{dN\left(t\right)}{dt}=rN\left(t\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+model tersebut kurang realistis,
+ karena populasi akan bertambah secara terus menerus seiring bertambahnya waktu.
+ karena pada kenyataannya,
+ populasi akan berhenti bertambah karena adanya keterbatasan makanan,
+ tempat,
+ dan keterbatasan yang lainnya.
+\end_layout
+
+\begin_layout Itemize
+Apabila populasi bertambah secara terus menerus maka akan kontradiksi dengan kondisi nyata.
+ karena sumberdaya terbatas dan tidak mungkin mendukung pertumbuhan secara terus menerus tanpa akhir.
+\end_layout
+
+\begin_layout Itemize
+Oleh sebab itu Pierre Francois Valhutt memperkenalkan model logistik.
+ model ini menambahkan kapasitas dukung lingkungan 
+\begin_inset Formula $K$
+\end_inset
+
+,
+ sehingga model pertumbuhan populasi diatas direvisi menjadi
+\begin_inset Formula 
+\[
+\frac{dN}{dt}=rN\left(1-\frac{N}{K}\right)
+\]
+
+\end_inset
+
+dengan 
+\begin_inset Formula $r$
+\end_inset
+
+ laju pertumbuhan intrinsik,
+ dan 
+\begin_inset Formula $K$
+\end_inset
+
+ kapasitas maksimum populasi yang dapat ditopang oleh lingkungan.
+\end_layout
+
+\begin_layout Itemize
+Solusi dari model tersebut
+\begin_inset Formula 
+\begin{align*}
+\frac{dN}{dt} & =rN\left(\frac{K-N}{K}\right)\\
+\frac{K}{N\left(K-N\right)}dN & =rdt\\
+\left(\frac{1}{N}+\frac{1}{K-N}\right)dN & =rdt\\
+\int\left(\frac{1}{N}+\frac{1}{K-N}\right)dN & =\int rdt\\
+\log\left(N\right)-\log\left(K-N\right) & =rt+C\\
+\log\left(\frac{N}{K-N}\right) & =rt+C\\
+\frac{N}{K-N} & =e^{rt+C}\\
+N & =Ce^{rt}\left(K-N\right)\\
+N & =CKe^{rt}-Ce^{rt}N\\
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+N+Ce^{rt}N & =CKe^{rt}\\
+\left(1-Ce^{rt}\right)N & =CKe^{rt}\\
+N & =\frac{CKe^{rt}}{1-Ce^{rt}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Misalkan
+\begin_inset Formula 
+\[
+y=ae^{bx}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\log\left(y\right) & =\log\left(a\right)+\log\left(e^{bx}\right)\\
+\log\left(y\right) & =\log\left(a\right)+bx\\
+ & =b_{0}+b_{1}x
+\end{align*}
+
+\end_inset
+
+misalkan 
+\begin_inset Formula $\log\left(y\right)=z$
+\end_inset
+
+,
+ maka diperoleh
+\begin_inset Formula 
+\[
+z=b_{0}+b_{1}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
