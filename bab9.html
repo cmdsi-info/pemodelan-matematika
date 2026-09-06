@@ -98,7 +98,7 @@
           Banyak fenomena dunia nyata yang struktur dasarnya bukan berupa ruang kontinu atau persamaan diferensial sederhana, melainkan berupa <strong>kumpulan entitas diskrit yang saling terhubung</strong>. Contohnya adalah jaringan jalan raya dan rute penerbangan, jaringan pipa distribusi air dan gas, interaksi antar-individu pada media sosial, hingga keterkaitan transmisi paket data di internet.
         </p>
         <p>
-          <strong>Teori Graf (*Graph Theory*)</strong>, yang berakar dari penyelesaian masalah Tujuh Jembatan Königsberg oleh Leonhard Euler (1736), menyediakan kerangka kerja matematika diskrit yang sangat ampuh untuk mengabstraksikan pola hubungan, menganalisis efisiensi rute, dan mengidentifikasi simpul-simpul paling berpengaruh dalam suatu jaringan kompleks.
+          <strong>Teori Graf (<em>Graph Theory</em>)</strong>, yang berakar dari penyelesaian masalah Tujuh Jembatan Königsberg oleh Leonhard Euler (1736), menyediakan kerangka kerja matematika diskrit yang sangat ampuh untuk mengabstraksikan pola hubungan, menganalisis efisiensi rute, dan mengidentifikasi simpul-simpul paling berpengaruh dalam suatu jaringan kompleks.
         </p>
       </section>
 
@@ -111,8 +111,8 @@
           Sebuah graf $G = (V, E)$ didefinisikan oleh dua himpunan:
         </p>
         <ul class="list-disc list-inside space-y-1.5 text-sm text-slate-700 ml-2">
-          <li><strong>Himpunan Simpul (*Vertices/Nodes*) $V$:</strong> $V = \{v_1, v_2, \dots, v_n\}$ yang merepresentasikan objek-objek dalam sistem (misal: kota, pengguna medsos, server).</li>
-          <li><strong>Himpunan Sisi (*Edges/Links*) $E$:</strong> $E \subseteq V \times V$ yang merepresentasikan interaksi atau hubungan antar-objek.</li>
+          <li><strong>Himpunan Simpul (<em>Vertices/Nodes</em>) $V$:</strong> $V = \{v_1, v_2, \dots, v_n\}$ yang merepresentasikan objek-objek dalam sistem (misal: kota, pengguna medsos, server).</li>
+          <li><strong>Himpunan Sisi (<em>Edges/Links</em>) $E$:</strong> $E \subseteq V \times V$ yang merepresentasikan interaksi atau hubungan antar-objek.</li>
         </ul>
 
         <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">Klasifikasi Graf dalam Pemodelan:</h3>
@@ -123,7 +123,7 @@
           </div>
           <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
             <h5 class="font-bold text-slate-900 text-xs uppercase tracking-wider text-indigo-700 mb-1">Berarah (Directed/Digraph)</h5>
-            <p class="text-xs text-slate-600">Sisi memiliki arah gerak panah dari $u$ ke $v$, $(u,v) \ne (v,u)$ (misal: jalan satu arah, hubungan *following* di X/Twitter, atau tautan hiperteks).</p>
+            <p class="text-xs text-slate-600">Sisi memiliki arah gerak panah dari $u$ ke $v$, $(u,v) \ne (v,u)$ (misal: jalan satu arah, hubungan <em>following</em> di X/Twitter, atau tautan hiperteks).</p>
           </div>
           <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
             <h5 class="font-bold text-slate-900 text-xs uppercase tracking-wider text-indigo-700 mb-1">Berbobot (Weighted)</h5>
@@ -151,7 +151,7 @@
               $$A = [a_{ij}], \qquad a_{ij} = \begin{cases} 1, & \text{jika } (v_i, v_j) \in E \\ 0, & \text{lainnya} \end{cases}$$
             </div>
             <p class="text-xs text-slate-500 mt-2">
-              <em>Sifat penting:</em> Elemen $(i,j)$ dari matriks $A^k$ menyatakan jumlah jalur (*paths*) dengan panjang tepat $k$ langkah yang menghubungkan simpul $i$ ke simpul $j$.
+              <em>Sifat penting:</em> Elemen $(i,j)$ dari matriks $A^k$ menyatakan jumlah jalur (<em>paths</em>) dengan panjang tepat $k$ langkah yang menghubungkan simpul $i$ ke simpul $j$.
             </p>
           </div>
 
@@ -164,7 +164,7 @@
               $$L = D - A$$
             </div>
             <p class="text-xs text-slate-500 mt-2">
-              Nilai eigen terkecil kedua dari matriks Laplace ($\lambda_2$), yang dikenal sebagai <em>konektivitas aljabar</em> atau <em>nilai Fiedler</em>, mengukur seberapa kokoh suatu jaringan tersambung dan berperan sentral dalam algoritma pembagian klaster graf (*spectral clustering*).
+              Nilai eigen terkecil kedua dari matriks Laplace ($\lambda_2$), yang dikenal sebagai <em>konektivitas aljabar</em> atau <em>nilai Fiedler</em>, mengukur seberapa kokoh suatu jaringan tersambung dan berperan sentral dalam algoritma pembagian klaster graf (<em>spectral clustering</em>).
             </p>
           </div>
         </div>
@@ -189,7 +189,7 @@
 
         <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">B. Masalah Aliran Maksimum (Maximum Flow Problem)</h3>
         <p class="text-sm sm:text-base">
-          Pada jaringan pipa minyak atau kabel komunikasi, setiap sisi memiliki batas kapasitas maksimum $c_{ij}$. Tujuannya adalah mengalirkan komoditas sebanyak mungkin dari sumber (*source* $s$) ke muara (*sink* $t$):
+          Pada jaringan pipa minyak atau kabel komunikasi, setiap sisi memiliki batas kapasitas maksimum $c_{ij}$. Tujuannya adalah mengalirkan komoditas sebanyak mungkin dari sumber (<em>source</em> $s$) ke muara (<em>sink</em> $t$):
         </p>
         <div class="my-3 p-4 bg-white border border-slate-200 rounded-xl font-mono text-center text-sm sm:text-base text-slate-900 shadow-sm">
           $$\max \sum_{j} f_{sj} \quad \text{dengan kendala } 0 \le f_{ij} \le c_{ij} \text{ dan konservasi aliran: } \sum_i f_{ik} = \sum_j f_{kj}$$
@@ -199,7 +199,7 @@
         <div class="my-4 p-4 bg-slate-100/70 rounded-2xl border border-slate-200">
           <h5 class="font-bold text-slate-900 text-xs uppercase tracking-wider text-indigo-700 mb-1">Teorema Max-Flow Min-Cut (Ford & Fulkerson, 1956)</h5>
           <p class="text-xs sm:text-sm text-slate-600">
-            Nilai aliran maksimum dari $s$ ke $t$ persis sama dengan kapasitas pemotongan minimum (*minimum cut*) dari sisi-sisi penutup yang memisahkan $s$ dan $t$. Pemotongan minimum ini mengidentifikasi titik leher botol (*bottleneck*) sistem.
+            Nilai aliran maksimum dari $s$ ke $t$ persis sama dengan kapasitas pemotongan minimum (<em>minimum cut</em>) dari sisi-sisi penutup yang memisahkan $s$ dan $t$. Pemotongan minimum ini mengidentifikasi titik leher botol (<em>bottleneck</em>) sistem.
           </p>
         </div>
       </section>
@@ -210,7 +210,7 @@
           <span class="text-indigo-600 font-mono text-xl">9.5</span> Model Jejaring Sosial & Metrik Sentralitas
         </h2>
         <p class="text-sm sm:text-base">
-          Dalam analisis jejaring sosial (*Social Network Analysis / SNA*), kita ingin mengukur seberapa "penting" atau "berpengaruh" posisi suatu simpul dalam jaringan:
+          Dalam analisis jejaring sosial (<em>Social Network Analysis / SNA</em>), kita ingin mengukur seberapa "penting" atau "berpengaruh" posisi suatu simpul dalam jaringan:
         </p>
 
         <div class="grid sm:grid-cols-3 gap-4 my-4">
@@ -238,7 +238,7 @@
           <span class="text-indigo-600 font-mono text-xl">9.6</span> Analisis Visual Topologi Jaringan & Sentralitas
         </h2>
         <p class="text-sm sm:text-base leading-relaxed mb-6">
-          Berikut diagram mandiri yang menjelaskan struktur matriks ketetanggaan, optimasi rute terpendek, serta peran sentralitas simpul penghubung (*broker*):
+          Berikut diagram mandiri yang menjelaskan struktur matriks ketetanggaan, optimasi rute terpendek, serta peran sentralitas simpul penghubung (<em>broker</em>):
         </p>
 
         <!-- GAMBAR 9.1: Representasi Graf & Matriks -->
@@ -421,7 +421,7 @@
           </div>
 
           <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed">
-            <p><strong>Uraian Analisis Gambar 9.3:</strong> Simpul $B$ bertindak sebagai jembatan (*bridge/cut-vertex*). Meskipun jumlah teman langsungnya (*degree*) tidak paling banyak, ia memiliki *betweenness centrality* tertinggi karena setiap komunikasi atau transaksi antara Komunitas Kiri dan Komunitas Kanan wajib melewati dirinya.</p>
+            <p><strong>Uraian Analisis Gambar 9.3:</strong> Simpul $B$ bertindak sebagai jembatan (<em>bridge/cut-vertex</em>). Meskipun jumlah teman langsungnya (<em>degree</em>) tidak paling banyak, ia memiliki <em>betweenness centrality</em> tertinggi karena setiap komunikasi atau transaksi antara Komunitas Kiri dan Komunitas Kanan wajib melewati dirinya.</p>
           </div>
         </div>
 
@@ -446,7 +446,7 @@
           <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <h5 class="font-bold text-slate-900 text-sm mb-2 text-indigo-700">Soal 2: Kerentanan Jaringan Komunikasi</h5>
             <p class="text-sm text-slate-600">
-              Dalam suatu jaringan infrastruktur server perbankan, mengapa simpul dengan nilai *betweenness centrality* tinggi harus diberi cadangan ganda (*redundancy*) dibanding simpul yang hanya memiliki nilai *degree centrality* tinggi? Analisis dampaknya terhadap ketahanan sistem jika terjadi kegagalan perangkat keras!
+              Dalam suatu jaringan infrastruktur server perbankan, mengapa simpul dengan nilai <em>betweenness centrality</em> tinggi harus diberi cadangan ganda (<em>redundancy</em>) dibanding simpul yang hanya memiliki nilai <em>degree centrality</em> tinggi? Analisis dampaknya terhadap ketahanan sistem jika terjadi kegagalan perangkat keras!
             </p>
           </div>
         </div>

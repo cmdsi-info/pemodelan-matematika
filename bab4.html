@@ -78,7 +78,7 @@
         Model Epidemiologi: SIR dan Variannya
       </h1>
       <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-        Menyelidiki dinamika transmisi penyakit infeksius melalui model kompartemen, konsep bilangan reproduksi dasar ($R_0$), dinamika puncak wabah, varian model SIS dan SEIR, intervensi vaksinasi, serta ambang kekebalan kelompok (*herd immunity*).
+        Menyelidiki dinamika transmisi penyakit infeksius melalui model kompartemen, konsep bilangan reproduksi dasar ($R_0$), dinamika puncak wabah, varian model SIS dan SEIR, intervensi vaksinasi, serta ambang kekebalan kelompok (<em>herd immunity</em>).
       </p>
       <div class="flex items-center gap-4 mt-6 text-xs text-slate-500 pt-4 border-t border-slate-100">
         <div><i class="fa-solid fa-user-pen mr-1 text-indigo-600"></i> Dr. Mohammad Jamhuri, M.Si.</div>
@@ -95,7 +95,7 @@
           <span class="text-indigo-600 font-mono text-xl">4.1</span> Pendahuluan
         </h2>
         <p>
-          Penyakit menular telah menjadi salah satu ancaman terbesar bagi peradaban manusia sepanjang sejarah, mulai dari Wabah Hitam (*Black Death*) di Eropa abad pertengahan, pandemi flu Spanyol 1918, hingga pandemi COVID-19 modern. Pemodelan matematika berperan vital dalam memahami pola penyebaran patogen, memprediksi puncak kebutuhan fasilitas medis, serta memberikan landasan ilmiah bagi kebijakan karantina, pembatasan sosial, dan vaksinasi massal.
+          Penyakit menular telah menjadi salah satu ancaman terbesar bagi peradaban manusia sepanjang sejarah, mulai dari Wabah Hitam (<em>Black Death</em>) di Eropa abad pertengahan, pandemi flu Spanyol 1918, hingga pandemi COVID-19 modern. Pemodelan matematika berperan vital dalam memahami pola penyebaran patogen, memprediksi puncak kebutuhan fasilitas medis, serta memberikan landasan ilmiah bagi kebijakan karantina, pembatasan sosial, dan vaksinasi massal.
         </p>
         <p>
           Fondasi pemodelan epidemiologi matematika modern diletakkan oleh <strong>William Ogilvy Kermack</strong> dan <strong>Anderson Gray McKendrick</strong> pada tahun 1927 melalui sistem persamaan diferensial kompartemen yang dikenal luas sebagai <strong>Model SIR</strong>.
@@ -217,7 +217,7 @@
           <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <h4 class="font-bold text-slate-900 text-base mb-2 text-indigo-700">2. Model SEIR (Dengan Masa Inkubasi/Laten)</h4>
             <p class="text-sm text-slate-600 mb-3">
-              Banyak virus (seperti Campak, Cacar, COVID-19) memiliki masa laten sebelum penderita menjadi infeksius. Ditambahkan kompartemen $E$ (*Exposed* / terpapar tetapi belum menularkan) dengan laju transisi laten $\sigma = 1/T_{\text{inkubasi}}$:
+              Banyak virus (seperti Campak, Cacar, COVID-19) memiliki masa laten sebelum penderita menjadi infeksius. Ditambahkan kompartemen $E$ (<em>Exposed</em> / terpapar tetapi belum menularkan) dengan laju transisi laten $\sigma = 1/T_{\text{inkubasi}}$:
             </p>
             <div class="font-mono text-xs sm:text-sm text-slate-800 bg-slate-50 p-3 rounded-xl text-center">
               $$\frac{dS}{dt} = -\beta \frac{S I}{N}, \quad \frac{dE}{dt} = \beta \frac{S I}{N} - \sigma E, \quad \frac{dI}{dt} = \sigma E - \gamma I, \quad \frac{dR}{dt} = \gamma I$$
@@ -246,7 +246,7 @@
           <span class="text-indigo-600 font-mono text-xl">4.5</span> Analisis Visual & Eksplorasi Kurva Epidemi
         </h2>
         <p class="text-sm sm:text-base leading-relaxed mb-6">
-          Berikut adalah visualisasi komprehensif dinamika penyebaran wabah penyakit, pergerakan kurva kompartemen, dan mekanisme perataan kurva (*flattening the curve*):
+          Berikut adalah visualisasi komprehensif dinamika penyebaran wabah penyakit, pergerakan kurva kompartemen, dan mekanisme perataan kurva (<em>flattening the curve</em>):
         </p>
 
         <!-- GAMBAR 4.1: Diagram Alir Kompartemen -->
@@ -356,7 +356,7 @@
         <div class="my-8 p-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
           <div class="text-center mb-4">
             <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">Gambar 4.3</span>
-            <h4 class="text-lg font-bold text-slate-900 mt-2">Prinsip Meratakan Kurva (*Flattening the Curve*) & Kekebalan Kelompok</h4>
+            <h4 class="text-lg font-bold text-slate-900 mt-2">Prinsip Meratakan Kurva (<em>Flattening the Curve</em>) & Kekebalan Kelompok</h4>
             <p class="text-xs text-slate-500">Dampak intervensi pengendalian terhadap kapasitas fasilitas kesehatan</p>
           </div>
 
@@ -390,7 +390,7 @@
           </div>
 
           <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed">
-            <p><strong>Keterangan Gambar 4.3:</strong> Intervensi non-farmasi (masker, karantina, pembatasan mobilitas) menurunkan nilai efektif laju kontak $\beta$, sehingga puncak kurva infeksi tertunda dan tetap berada di bawah daya tampung rumah sakit (*healthcare capacity*).</p>
+            <p><strong>Keterangan Gambar 4.3:</strong> Intervensi non-farmasi (masker, karantina, pembatasan mobilitas) menurunkan nilai efektif laju kontak $\beta$, sehingga puncak kurva infeksi tertunda dan tetap berada di bawah daya tampung rumah sakit (<em>healthcare capacity</em>).</p>
           </div>
         </div>
 
@@ -406,7 +406,7 @@
           <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <h5 class="font-bold text-slate-900 text-sm mb-2 text-indigo-700">Soal 1: Perhitungan Ambang Vaksinasi Campak vs Flu</h5>
             <p class="text-sm text-slate-600">
-              Diketahui penyakit influenza musiman memiliki $R_0 \approx 1.4$, sedangkan penyakit campak (*measles*) memiliki $R_0 \approx 16$. Hitung proporsi vaksinasi minimum ($p_c$) untuk menciptakan kekebalan kelompok (*herd immunity*) pada kedua penyakit tersebut. Mengapa pengendalian campak membutuhkan cakupan imunisasi yang jauh lebih ketat?
+              Diketahui penyakit influenza musiman memiliki $R_0 \approx 1.4$, sedangkan penyakit campak (<em>measles</em>) memiliki $R_0 \approx 16$. Hitung proporsi vaksinasi minimum ($p_c$) untuk menciptakan kekebalan kelompok (<em>herd immunity</em>) pada kedua penyakit tersebut. Mengapa pengendalian campak membutuhkan cakupan imunisasi yang jauh lebih ketat?
             </p>
           </div>
 

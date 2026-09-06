@@ -95,10 +95,10 @@
           <span class="text-indigo-600 font-mono text-xl">6.1</span> Pendahuluan
         </h2>
         <p>
-          Pada bab-bab awal, kita telah memusatkan perhatian pada model deterministik di mana kondisi awal sistem secara mutlak menentukan lintasan perilakunya di masa depan. Namun, banyak fenomena alam, teknologi, dan ekonomi yang dipenuhi unsur keacakan (*randomness*), derau lingkungan (*environmental noise*), atau ketidakpastian informasi.
+          Pada bab-bab awal, kita telah memusatkan perhatian pada model deterministik di mana kondisi awal sistem secara mutlak menentukan lintasan perilakunya di masa depan. Namun, banyak fenomena alam, teknologi, dan ekonomi yang dipenuhi unsur keacakan (<em>randomness</em>), derau lingkungan (<em>environmental noise</em>), atau ketidakpastian informasi.
         </p>
         <p>
-          Model stokastik menyediakan fondasi aljabar linier dan teori probabilitas untuk menganalisis sistem yang berevolusi secara probabilistik. Salah satu kelas model stokastik paling berpengaruh adalah <strong>Rantai Markov (*Markov Chains*)</strong>, yang diperkenalkan oleh matematikawan Rusia <strong>Andrey Andreyevich Markov</strong> (1856–1922). Sifat utamanya adalah <em>nirdaya ingat</em> (*memoryless property*): masa depan sistem hanya bergantung pada keadaan saat ini, bukan pada rangkaian peristiwa di masa lampau.
+          Model stokastik menyediakan fondasi aljabar linier dan teori probabilitas untuk menganalisis sistem yang berevolusi secara probabilistik. Salah satu kelas model stokastik paling berpengaruh adalah <strong>Rantai Markov (<em>Markov Chains</em>)</strong>, yang diperkenalkan oleh matematikawan Rusia <strong>Andrey Andreyevich Markov</strong> (1856–1922). Sifat utamanya adalah <em>nirdaya ingat</em> (<em>memoryless property</em>): masa depan sistem hanya bergantung pada keadaan saat ini, bukan pada rangkaian peristiwa di masa lampau.
         </p>
       </section>
 
@@ -108,7 +108,7 @@
           <span class="text-indigo-600 font-mono text-xl">6.2</span> Definisi Formal Rantai Markov Diskrit
         </h2>
         <p class="text-sm sm:text-base">
-          Misalkan $(\Omega, \mathcal{F}, P)$ adalah ruang probabilitas. Suatu kumpulan variabel acak $\{X_n, n \in T\}$ dengan himpunan indeks waktu diskrit $T = \{0, 1, 2, \dots\}$ dan ruang keadaan (*state space*) tercacah $S = \{s_1, s_2, \dots, s_M\}$ disebut sebagai <strong>proses stokastik waktu diskrit</strong>.
+          Misalkan $(\Omega, \mathcal{F}, P)$ adalah ruang probabilitas. Suatu kumpulan variabel acak $\{X_n, n \in T\}$ dengan himpunan indeks waktu diskrit $T = \{0, 1, 2, \dots\}$ dan ruang keadaan (<em>state space</em>) tercacah $S = \{s_1, s_2, \dots, s_M\}$ disebut sebagai <strong>proses stokastik waktu diskrit</strong>.
         </p>
 
         <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">Sifat Markov (The Markov Property)</h3>
@@ -122,7 +122,7 @@
         </div>
 
         <p class="text-sm text-slate-600">
-          Jika peluang bersyarat ini tidak berubah seiring waktu (tidak bergantung pada $n$), rantai Markov disebut <strong>homogen waktu (*time-homogeneous*)</strong>, dan kita mendefinisikan peluang transisi satu-langkah:
+          Jika peluang bersyarat ini tidak berubah seiring waktu (tidak bergantung pada $n$), rantai Markov disebut <strong>homogen waktu (<em>time-homogeneous</em>)</strong>, dan kita mendefinisikan peluang transisi satu-langkah:
         </p>
         <div class="my-3 p-3 bg-white border border-slate-200 rounded-xl font-mono text-center text-sm sm:text-base text-slate-900 font-bold shadow-sm">
           $$p_{ij} = P(X_{n+1} = j \mid X_n = i)$$
@@ -357,7 +357,7 @@
         <div class="my-8 p-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
           <div class="text-center mb-4">
             <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">Gambar 6.3</span>
-            <h4 class="text-lg font-bold text-slate-900 mt-2">Struktur Rantai Penyerap: Model Kebangkrutan Penjudi (*Gambler's Ruin*)</h4>
+            <h4 class="text-lg font-bold text-slate-900 mt-2">Struktur Rantai Penyerap: Model Kebangkrutan Penjudi (<em>Gambler's Ruin</em>)</h4>
             <p class="text-xs text-slate-500">Transisi antar-tingkat modal dengan keadaan penyerap di batas 0 dan N</p>
           </div>
 
@@ -420,7 +420,7 @@
           </div>
 
           <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed">
-            <p><strong>Keterangan Gambar 6.3:</strong> State $1, 2, 3$ adalah keadaan sementara (*transient states*). Pada akhirnya saat $n \to \infty$, sistem pasti akan terserap ke salah satu dari dua keadaan penyerap (*absorbing states*): bangkrut total ($0) atau mencapai target menang ($4). Model ini banyak digunakan dalam analisis risiko likuiditas perbankan dan keandalan sistem kritis.</p>
+            <p><strong>Keterangan Gambar 6.3:</strong> State $1, 2, 3$ adalah keadaan sementara (<em>transient states</em>). Pada akhirnya saat $n \to \infty$, sistem pasti akan terserap ke salah satu dari dua keadaan penyerap (<em>absorbing states</em>): bangkrut total ($0) atau mencapai target menang ($4). Model ini banyak digunakan dalam analisis risiko likuiditas perbankan dan keandalan sistem kritis.</p>
           </div>
         </div>
 
@@ -449,7 +449,7 @@
           <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <h5 class="font-bold text-slate-900 text-sm mb-2 text-indigo-700">Soal 2: Algoritma PageRank Google</h5>
             <p class="text-sm text-slate-600">
-              Jelaskan bagaimana konsep rantai Markov, penjelajah acak (*random surfer*), dan faktor redaman (*damping factor* $d \approx 0.85$) digunakan oleh mesin pencari Google untuk mengatasi simpul buntu (*dangling nodes*) dan menghitung skor otoritas halaman web!
+              Jelaskan bagaimana konsep rantai Markov, penjelajah acak (<em>random surfer</em>), dan faktor redaman (<em>damping factor</em> $d \approx 0.85$) digunakan oleh mesin pencari Google untuk mengatasi simpul buntu (<em>dangling nodes</em>) dan menghitung skor otoritas halaman web!
             </p>
           </div>
         </div>

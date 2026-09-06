@@ -95,10 +95,10 @@
           <span class="text-indigo-600 font-mono text-xl">5.1</span> Pendahuluan
         </h2>
         <p>
-          Antrean (*queue*) adalah pengalaman universal yang dialami setiap manusia: menunggu di loket rumah sakit, gerbang tol jalan raya, antrean kasir supermarket, hingga lalu lintas paket data di server komputasi awan. Fenomena antrean muncul setiap kali permintaan layanan melebihi kapasitas pelayanan sesaat yang tersedia.
+          Antrean (<em>queue</em>) adalah pengalaman universal yang dialami setiap manusia: menunggu di loket rumah sakit, gerbang tol jalan raya, antrean kasir supermarket, hingga lalu lintas paket data di server komputasi awan. Fenomena antrean muncul setiap kali permintaan layanan melebihi kapasitas pelayanan sesaat yang tersedia.
         </p>
         <p>
-          Secara operasional, terdapat tarik-menarik biaya yang berlawanan (*trade-off*):
+          Secara operasional, terdapat tarik-menarik biaya yang berlawanan (<em>trade-off</em>):
         </p>
         <div class="grid sm:grid-cols-2 gap-4 my-6">
           <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
@@ -111,7 +111,7 @@
           </div>
         </div>
         <p>
-          <strong>Teori Antrean (*Queueing Theory*)</strong>, yang dipelopori oleh insinyur Denmark <strong>A.K. Erlang</strong> pada tahun 1909 dalam konteks jaringan telepon Kopenhagen, memberikan kerangka matematis probabilistik untuk mengoptimalkan titik temu antara kedua biaya tersebut.
+          <strong>Teori Antrean (<em>Queueing Theory</em>)</strong>, yang dipelopori oleh insinyur Denmark <strong>A.K. Erlang</strong> pada tahun 1909 dalam konteks jaringan telepon Kopenhagen, memberikan kerangka matematis probabilistik untuk mengoptimalkan titik temu antara kedua biaya tersebut.
         </p>
       </section>
 
@@ -131,7 +131,7 @@
           </div>
           <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <h5 class="font-bold text-slate-900 text-sm mb-1 text-indigo-700">2. Struktur & Kapasitas Antrean (Queue Discipline)</h5>
-            <p class="text-xs sm:text-sm text-slate-600">Kapasitas ruang tunggu (berhingga atau tak hingga) dan urutan pemilihan pelanggan yang dilayani: FIFO (*First-In First-Out*), LIFO (*Last-In First-Out*), SIRO (*Service In Random Order*), atau berdasarkan prioritas urgensi (*Priority Queue*).</p>
+            <p class="text-xs sm:text-sm text-slate-600">Kapasitas ruang tunggu (berhingga atau tak hingga) dan urutan pemilihan pelanggan yang dilayani: FIFO (<em>First-In First-Out</em>), LIFO (<em>Last-In First-Out</em>), SIRO (<em>Service In Random Order</em>), atau berdasarkan prioritas urgensi (<em>Priority Queue</em>).</p>
           </div>
           <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <h5 class="font-bold text-slate-900 text-sm mb-1 text-indigo-700">3. Mekanisme Pelayanan (Service Mechanism)</h5>
@@ -139,7 +139,7 @@
           </div>
           <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <h5 class="font-bold text-slate-900 text-sm mb-1 text-indigo-700">4. Keberangkatan (Departure)</h5>
-            <p class="text-xs sm:text-sm text-slate-600">Pelanggan yang selesai dilayani meninggalkan sistem, atau kembali ke antrean lain pada sistem berantai (*tandem queues*).</p>
+            <p class="text-xs sm:text-sm text-slate-600">Pelanggan yang selesai dilayani meninggalkan sistem, atau kembali ke antrean lain pada sistem berantai (<em>tandem queues</em>).</p>
           </div>
         </div>
       </section>
@@ -159,12 +159,12 @@
         </div>
 
         <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-700 ml-2">
-          <li><strong>$A$ (Distribusi Kedatangan):</strong> $M$ = Markovian/Eksponensial, $D$ = Deterministik/Pasti, $E_k$ = Erlang-$k$, $G$ = Distribusi Umum (*General*).</li>
+          <li><strong>$A$ (Distribusi Kedatangan):</strong> $M$ = Markovian/Eksponensial, $D$ = Deterministik/Pasti, $E_k$ = Erlang-$k$, $G$ = Distribusi Umum (<em>General</em>).</li>
           <li><strong>$S$ (Distribusi Waktu Pelayanan):</strong> Simbol yang sama seperti $A$.</li>
           <li><strong>$c$ (Jumlah Server Paralel):</strong> $1, 2, 3, \dots$ server identik yang melayani antrean secara mandiri.</li>
           <li><strong>$K$ (Kapasitas Maksimum Sistem):</strong> Jika diabaikan, diasumsikan tak hingga ($\infty$).</li>
           <li><strong>$N$ (Ukuran Populasi Sumber):</strong> Jika diabaikan, diasumsikan tak hingga ($\infty$).</li>
-          <li><strong>$D$ (Disiplin Antrean):</strong> Standar bawaan adalah FIFO (*First In First Out*).</li>
+          <li><strong>$D$ (Disiplin Antrean):</strong> Standar bawaan adalah FIFO (<em>First In First Out</em>).</li>
         </ul>
       </section>
 
@@ -185,7 +185,7 @@
           $$\rho = \frac{\lambda}{\mu}$$
         </div>
         <p class="text-xs text-red-600 font-semibold mb-4">
-          Syarat mutlak kestabilan sistem (steady-state): $\rho < 1$ ($\lambda < \mu$). Jika $\lambda \ge \mu$, antrean akan membengkak menuju tak hingga dan sistem meledak (*unstable*).
+          Syarat mutlak kestabilan sistem (steady-state): $\rho < 1$ ($\lambda < \mu$). Jika $\lambda \ge \mu$, antrean akan membengkak menuju tak hingga dan sistem meledak (<em>unstable</em>).
         </p>
 
         <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">Distribusi Peluang Steady-State</h3>
@@ -248,7 +248,7 @@
 
         <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">Formula Erlang-C</h3>
         <p class="text-sm text-slate-600">
-          Probabilitas seorang pelanggan yang baru tiba harus menunggu antrean (*Probability of Waiting*) dirumuskan oleh formula klasik Erlang-C:
+          Probabilitas seorang pelanggan yang baru tiba harus menunggu antrean (<em>Probability of Waiting</em>) dirumuskan oleh formula klasik Erlang-C:
         </p>
         <div class="my-3 p-4 bg-indigo-50/70 border border-indigo-200 rounded-xl font-mono text-center text-sm sm:text-base text-slate-900">
           $$P_{\text{wait}} = C(c, \lambda/\mu) = \frac{\frac{(c\rho)^c}{c!(1 - \rho)}}{\sum_{k=0}^{c-1} \frac{(c\rho)^k}{k!} + \frac{(c\rho)^c}{c!(1 - \rho)}}$$
@@ -323,7 +323,7 @@
           </div>
 
           <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed">
-            <p><strong>Keterangan Gambar 5.1:</strong> Sistem multi-server dengan satu antrean bersama (*single-queue multi-server*) selalu terbukti secara matematis lebih efisien daripada sistem di mana masing-masing server memiliki antrean terpisah, karena tidak akan pernah ada server yang menganggur selama masih ada pelanggan di antrean.</p>
+            <p><strong>Keterangan Gambar 5.1:</strong> Sistem multi-server dengan satu antrean bersama (<em>single-queue multi-server</em>) selalu terbukti secara matematis lebih efisien daripada sistem di mana masing-masing server memiliki antrean terpisah, karena tidak akan pernah ada server yang menganggur selama masih ada pelanggan di antrean.</p>
           </div>
         </div>
 

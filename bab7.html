@@ -78,7 +78,7 @@
         Model Input–Output Leontief dalam Ekonomi
       </h1>
       <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-        Membedah struktur keterkaitan antar-sektor industri nasional melalui aljabar linier matriks, perumusan koefisien teknologi, invers Leontief $(I-A)^{-1}$, kondisi Hawkins–Simon, serta efek pengganda (*multiplier effect*) rantai pasok.
+        Membedah struktur keterkaitan antar-sektor industri nasional melalui aljabar linier matriks, perumusan koefisien teknologi, invers Leontief $(I-A)^{-1}$, kondisi Hawkins–Simon, serta efek pengganda (<em>multiplier effect</em>) rantai pasok.
       </p>
       <div class="flex items-center gap-4 mt-6 text-xs text-slate-500 pt-4 border-t border-slate-100">
         <div><i class="fa-solid fa-user-pen mr-1 text-indigo-600"></i> Dr. Mohammad Jamhuri, M.Si.</div>
@@ -112,8 +112,8 @@
         </p>
         <ul class="list-disc list-inside space-y-1 text-sm text-slate-700 ml-2">
           <li>$X_i$: Total nilai <strong>output bruto</strong> yang diproduksi oleh sektor $i$.</li>
-          <li>$x_{ij}$: Nilai output dari sektor $i$ yang dikonsumsi sebagai <strong>input antara (*intermediate input*)</strong> oleh sektor $j$.</li>
-          <li>$d_i$: Nilai output dari sektor $i$ yang dialokasikan untuk memenuhi <strong>permintaan akhir (*final demand*)</strong> (konsumsi rumah tangga, investasi pemerintah, dan ekspor neto).</li>
+          <li>$x_{ij}$: Nilai output dari sektor $i$ yang dikonsumsi sebagai <strong>input antara (<em>intermediate input</em>)</strong> oleh sektor $j$.</li>
+          <li>$d_i$: Nilai output dari sektor $i$ yang dialokasikan untuk memenuhi <strong>permintaan akhir (<em>final demand</em>)</strong> (konsumsi rumah tangga, investasi pemerintah, dan ekspor neto).</li>
         </ul>
 
         <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">Persamaan Keseimbangan Sektoral</h3>
@@ -126,7 +126,7 @@
 
         <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">Matriks Koefisien Input Teknis ($A$)</h3>
         <p class="text-sm sm:text-base">
-          Asumsi fundamental model Leontief menyatakan bahwa terdapat hubungan proporsional tetap (*fixed proportions technology / fungsi produksi Leontief*). Rasio antara nilai input yang dibutuhkan dari sektor $i$ dan nilai output yang dihasilkan sektor $j$ disebut <strong>koefisien teknologi</strong>:
+          Asumsi fundamental model Leontief menyatakan bahwa terdapat hubungan proporsional tetap (<em>fixed proportions technology / fungsi produksi Leontief</em>). Rasio antara nilai input yang dibutuhkan dari sektor $i$ dan nilai output yang dihasilkan sektor $j$ disebut <strong>koefisien teknologi</strong>:
         </p>
         <!-- Formula Box Light -->
         <div class="my-4 p-5 bg-indigo-50/70 border border-indigo-200 rounded-2xl text-center text-slate-900 font-mono text-base sm:text-lg shadow-sm">
@@ -173,7 +173,7 @@
           $$\mathbf{X} = (I - A)^{-1} \mathbf{D}$$
         </div>
         <p class="text-xs text-slate-500">
-          Matriks $B = (I - A)^{-1}$ disebut <strong>Matriks Pengganda Leontief (*Leontief Inverse Multiplier Matrix*)</strong>.
+          Matriks $B = (I - A)^{-1}$ disebut <strong>Matriks Pengganda Leontief (<em>Leontief Inverse Multiplier Matrix</em>)</strong>.
         </p>
       </section>
 
@@ -190,7 +190,7 @@
         <div class="my-5 p-5 bg-slate-100/70 rounded-2xl border border-slate-200">
           <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider text-indigo-700 mb-2">Teorema Hawkins–Simon</h4>
           <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-            Sistem ekonomi terbuka produktif memiliki solusi $\mathbf{X} \ge \mathbf{0}$ jika dan hanya jika seluruh minor utama (*principal minors*) dari matriks $(I - A)$ bernilai positif secara berurutan:
+            Sistem ekonomi terbuka produktif memiliki solusi $\mathbf{X} \ge \mathbf{0}$ jika dan hanya jika seluruh minor utama (<em>principal minors</em>) dari matriks $(I - A)$ bernilai positif secara berurutan:
           </p>
           <div class="font-mono text-xs sm:text-sm text-slate-900 text-center space-y-1">
             <div>$$|1 - a_{11}| > 0$$</div>
@@ -270,7 +270,7 @@
         <div class="my-8 p-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
           <div class="text-center mb-4">
             <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">Gambar 7.2</span>
-            <h4 class="text-lg font-bold text-slate-900 mt-2">Dekomposisi Deret Geometri: Efek Pengganda Rantai Pasok (*The Multiplier Ripple*)</h4>
+            <h4 class="text-lg font-bold text-slate-900 mt-2">Dekomposisi Deret Geometri: Efek Pengganda Rantai Pasok (<em>The Multiplier Ripple</em>)</h4>
             <p class="text-xs text-slate-500">Bagaimana 1 unit stimulus permintaan akhir bertransformasi menjadi gelombang output total</p>
           </div>
 
@@ -326,7 +326,7 @@
             <p><strong>Wawasan Manajerial Gambar 7.2:</strong></p>
             <ul class="list-disc list-inside space-y-1 text-slate-600">
               <li>Invers Leontief $(I-A)^{-1}$ ekuivalen dengan deret geometri tak hingga matriks: $I + A + A^2 + A^3 + \dots$.</li>
-              <li>Ketika pemerintah menambah belanja 1 triliun rupiah pada infrastruktur ($I$), kontraktor membeli semen dan baja ($A$), produsen baja membeli bijih besi dan listrik ($A^2$), dan seterusnya. Penjumlahan seluruh putaran inilah yang membentuk nilai pengganda ekonomi total (*economic multiplier*).</li>
+              <li>Ketika pemerintah menambah belanja 1 triliun rupiah pada infrastruktur ($I$), kontraktor membeli semen dan baja ($A$), produsen baja membeli bijih besi dan listrik ($A^2$), dan seterusnya. Penjumlahan seluruh putaran inilah yang membentuk nilai pengganda ekonomi total (<em>economic multiplier</em>).</li>
             </ul>
           </div>
         </div>
@@ -416,7 +416,7 @@
 
         <h3 class="text-xl font-bold text-slate-900 mt-8 mb-2">Penutup Bab</h3>
         <p class="text-sm sm:text-base text-slate-700">
-          Model Input–Output Leontief membuktikan bagaimana aljabar linier matriks mampu merekam denyut keterkaitan seluruh sektor ekonomi makro. Pada bab berikutnya (Bab 8), kita beralih ke ranah pemodelan dinamika diskrit nonlinier melalui <strong>Persamaan Beda dan Model Diskrit</strong> untuk mempelajari fenomena bifurkasi dan kaos (*deterministic chaos*).
+          Model Input–Output Leontief membuktikan bagaimana aljabar linier matriks mampu merekam denyut keterkaitan seluruh sektor ekonomi makro. Pada bab berikutnya (Bab 8), kita beralih ke ranah pemodelan dinamika diskrit nonlinier melalui <strong>Persamaan Beda dan Model Diskrit</strong> untuk mempelajari fenomena bifurkasi dan kaos (<em>deterministic chaos</em>).
         </p>
       </section>
 
