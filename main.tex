@@ -2204,8 +2204,23 @@ x = Ax + f.
 
 Sehingga:
 \[
-(I - A)x = f, \quad \Rightarrow \quad x = (I-A)^{-1} f.
+(I - A)\mathbf{x} = \mathbf{f} \quad \implies \quad \mathbf{x} = (I-A)^{-1} \mathbf{f}.
 \]
+Matriks $L = (I - A)^{-1}$ dikenal sebagai {\jsg matriks invers Leontief} atau matriks pengganda output (\textit{output multiplier matrix}). Elemen $L_{ij}$ menyatakan jumlah unit output sektor $i$ yang harus diproduksi secara langsung maupun tidak langsung untuk memenuhi setiap satu unit pertambahan permintaan akhir pada sektor $j$.
+
+\subsection{Kondisi Hawkins--Simon dan Kelaikan Ekonomi}
+Secara matematis, solusi $\mathbf{x} = (I - A)^{-1}\mathbf{f}$ harus bernilai non-negatif ($\mathbf{x} \ge \mathbf{0}$) untuk setiap vektor permintaan akhir yang non-negatif ($\mathbf{f} \ge \mathbf{0}$). Kondisi Hawkins--Simon (1949) memberikan syarat perlu dan cukup agar perekonomian beroperasi secara layak:
+\begin{enumerate}
+    \item Elemen diagonal matriks teknologi memenuhi $a_{ii} < 1$ untuk setiap sektor $i$. Artinya, tidak ada sektor yang mengonsumsi lebih dari satu unit outputnya sendiri hanya untuk menghasilkan satu unit output.
+    \item Semua determinan minor utama dari matriks $(I - A)$ bernilai positif, khususnya $\det(I - A) > 0$.
+\end{enumerate}
+
+\subsection{Ekspansi Deret Neumann dan Dampak Berantai}
+Jika jari-jari spektral matriks teknologi memenuhi $\rho(A) < 1$, invers Leontief dapat dinyatakan sebagai deret geometri matriks:
+\[
+(I - A)^{-1} = I + A + A^2 + A^3 + \dots
+\]
+Interpretasi ekonominya mencerminkan efek berantai: suku $I\mathbf{f}$ adalah dampak langsung, suku $A\mathbf{f}$ adalah dampak putaran pertama penyediaan input antara, dan suku-suku berikutnya adalah dampak putaran sekunder di sepanjang rantai pasok ekonomi nasional.
 
 Matriks $(I-A)^{-1}$ disebut {\jsg Leontief inverse}, menggambarkan total dampak (langsung dan tidak langsung) perubahan permintaan akhir terhadap output sektor.
 
@@ -2402,7 +2417,42 @@ x^\ast = f(x^\ast).
 
 Stabilitas ditentukan oleh turunan:
 \[
-|f'(x^\ast)| < 1 \Rightarrow \text{stabil}, \quad |f'(x^\ast)| > 1 \Rightarrow \text{tidak stabil}.
+|f'(x^\ast)| < 1 \implies \text{stabil}, \quad |f'(x^\ast)| > 1 \implies \text{tidak stabil}.
+\]
+
+\subsection{Kriteria Kestabilan Linier Lokal dan Metode Cobweb}
+Misalkan diberikan perturbasi infinitesimal $\epsilon_n = x_n - x^\ast$. Melalui ekspansi deret Taylor di sekitar $x^\ast$:
+\[
+x^\ast + \epsilon_{n+1} = f(x^\ast + \epsilon_n) \approx f(x^\ast) + f'(x^\ast)\epsilon_n.
+\]
+Mengingat $f(x^\ast) = x^\ast$, dinamika perturbasi memenuhi:
+\[
+\epsilon_{n+1} \approx f'(x^\ast)\epsilon_n \implies \epsilon_n \approx [f'(x^\ast)]^n \epsilon_0.
+\]
+Kriteria kestabilan:
+\begin{itemize}
+    \item Jika $|f'(x^\ast)| < 1$, maka $\epsilon_n \to 0$ saat $n \to \infty$. Titik $x^\ast$ bersifat {\jsg stabil asimtotik} (\textit{attractor / sink}).
+    \item Jika $|f'(x^\ast)| > 1$, maka $|\epsilon_n| \to \infty$. Titik $x^\ast$ bersifat {\jsg tidak stabil} (\textit{repeller / source}).
+    \item Jika $0 < f'(x^\ast) < 1$, konvergensi berlangsung monotonik.
+    \item Jika $-1 < f'(x^\ast) < 0$, konvergensi berupa osilasi teredam spiral (\textit{cobweb spiral}).
+\end{itemize}
+
+\subsection{Aplikasi pada Peta Logistik Diskrit}
+Untuk model logistik diskrit $f(x) = r x (1 - x)$, titik tetap diperoleh dari $x = r x (1 - x) \implies x[rx - (r - 1)] = 0$:
+\[
+x_1^\ast = 0, \qquad x_2^\ast = \frac{r-1}{r} \quad (r > 1).
+\]
+Turunan fungsi pemetaan adalah $f'(x) = r - 2rx$:
+\begin{enumerate}
+    \item Di $x_1^\ast = 0$: $f'(0) = r$. Titik kepunahan ini stabil jika $r < 1$ dan tidak stabil jika $r > 1$.
+    \item Di $x_2^\ast = \frac{r-1}{r}$: 
+    \[
+    f'(x_2^\ast) = r - 2r\left(\frac{r-1}{r}\right) = 2 - r.
+    \]
+    Syarat kestabilan: $|2 - r| < 1 \iff -1 < 2 - r < 1 \iff 1 < r < 3$.
+\end{enumerate}
+Ketika $r$ melewati $r = 3$, turunan bernilai $f'(x_2^\ast) = -1$, terjadi {\jsg bifurkasi flip / penggandaan periode} di mana titik tetap kehilangan kestabilan dan melahirkan siklus stabil berperiode 2. Peningkatan nilai $r$ lebih lanjut memicu kaskade bifurkasi Feigenbaum (siklus 4, 8, 16, \dots) hingga memasuki rezim {\jsg kaos deterministik} pada $r > 3.5699$.
+\[
 \]
 
 Contoh model logistik:
