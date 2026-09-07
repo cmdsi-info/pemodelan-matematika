@@ -218,24 +218,32 @@
   \section*{Tentang Penulis}
   \addcontentsline{toc}{section}{Tentang Penulis}
 
+  \IfFileExists{Gbr/jamhuri_sqr.jpg}{%
   \begin{wrapfigure}{l}{2.5cm}
     \includegraphics[width=2.5cm]{Gbr/jamhuri_sqr.jpg}
   \end{wrapfigure}
+  }{}
   \textbf{Dr. Mohammad Jamhuri, M.Si.} adalah dosen tetap di Departemen Matematika, Fakultas Sains dan Teknologi, Universitas Islam Negeri Maulana Malik Ibrahim Malang. Ia menyelesaikan program doktoral di bidang Matematika Terapan di Institut Teknologi Sepuluh Nopember (ITS) Surabaya. Minat riset beliau meliputi machine learning, analisis numerik, dan pemodelan komputasional.
 
+  \IfFileExists{Gbr/Isa_sqr.jpg}{%
   \begin{wrapfigure}{r}{2.5cm}
     \includegraphics[width=2.5cm]{Gbr/Isa_sqr.jpg}
   \end{wrapfigure}
+  }{}
   \textbf{Prof. Dr. Mohammad Isa Irawan, M.T.} merupakan guru besar di Departemen Matematika, Fakultas Sains dan Analitika Data, Institut Teknologi Sepuluh Nopember (ITS) Surabaya. Ia meraih gelar doktor di bidang Software Engineering dari Vienna University of Technology, Austria. Minat riset beliau meliputi data science, machine learning, bioinformatika, data mining, artificial intelligence, dan decision sciences. Ia juga aktif memimpin berbagai proyek riset internasional.
 
+  \IfFileExists{Gbr/mukhlash_sqr.jpg}{%
   \begin{wrapfigure}{r}{2.5cm}
     \includegraphics[width=2.5cm]{Gbr/mukhlash_sqr.jpg}
   \end{wrapfigure}
+  }{}
   \textbf{Dr. Imam Mukhlash, M.T.} adalah dosen dan peneliti di Departemen Matematika ITS. Ia menyelesaikan pendidikan doktoral di bidang data mining di Institut Teknologi Bandung. Minat risetnya mencakup data mining, pembelajaran mesin, dan rekayasa perangkat lunak, dengan fokus pada pengolahan data tekstual dan temporal.
 
+  \IfFileExists{Gbr/Kusumastuti.png}{%
   \begin{wrapfigure}{l}{2.5cm}
     \includegraphics[width=2.5cm]{Gbr/Kusumastuti.png}
   \end{wrapfigure}
+  }{}
   \textbf{Ari Kusumastuti, M.Pd., M.Si.} merupakan dosen Matematika di UIN Maulana Malik Ibrahim Malang. Ia menyelesaikan pendidikan S2 di bidang Matematika Terapan dan kini tengah menempuh studi doktoral di ITS. Fokus risetnya adalah pada pemodelan matematika dan simulasi numerik dalam ilmu alam dan sosial.
 
   \clearpage

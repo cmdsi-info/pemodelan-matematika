@@ -35,8 +35,18 @@
       }
     }
   </script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    section[id] { scroll-margin-top: 5rem; }
     pre, code { font-family: 'JetBrains Mono', monospace; }
   </style>
 </head>
@@ -59,7 +69,7 @@
         <a href="#cpmk" class="hover:text-indigo-600 transition">CPMK</a>
         <a href="#daftar-bab" class="hover:text-indigo-600 transition">Daftar Bab</a>
         <a href="#silabus" class="hover:text-indigo-600 transition">Silabus RPS</a>
-        <a href="#simulasi" class="hover:text-indigo-600 transition">Simulasi Python</a>
+        <a href="#simulasi" class="hover:text-indigo-600 transition">Visualisasi Model</a>
         <a href="#pengampu" class="hover:text-indigo-600 transition">Pengampu</a>
       </nav>
       <div class="flex items-center gap-3">
@@ -100,11 +110,11 @@
           <!-- Quick Stats -->
           <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-slate-200/80 max-w-md mx-auto lg:mx-0">
             <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">13 Bab</div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">12 Bab</div>
               <div class="text-xs font-medium text-slate-500 mt-1">Materi Terstruktur</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-indigo-600">180 Hal.</div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-indigo-600">175 Hal.</div>
               <div class="text-xs font-medium text-slate-500 mt-1">Draf Buku Ajar</div>
             </div>
             <div>
@@ -133,8 +143,8 @@
                 </div>
                 <div class="my-6">
                   <div class="p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/10 text-xs font-mono text-indigo-200">
-                    <div>\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right)</div>
-                    <div class="mt-1">\frac{\partial u}{\partial t} + 6u\frac{\partial u}{\partial x} + \frac{\partial^3 u}{\partial x^3} = 0</div>
+                    <div>\(\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right)\)</div>
+                    <div class="mt-1">\(\frac{\partial u}{\partial t} + 6u\frac{\partial u}{\partial x} + \frac{\partial^3 u}{\partial x^3} = 0\)</div>
                   </div>
                 </div>
                 <div class="pt-4 border-t border-white/10 flex items-center justify-between">
@@ -202,7 +212,7 @@
       <div class="max-w-3xl mx-auto text-center mb-12">
         <h2 class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">Struktur Konten</h2>
         <h3 class="text-3xl font-extrabold text-slate-900">Daftar Bab Buku Ajar</h3>
-        <p class="text-slate-600 mt-3 text-sm sm:text-base">Materi terbagi ke dalam 13 bab yang mencakup spektrum luas pemodelan kontinu, diskrit, stokastik, dan persamaan diferensial parsial.</p>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">Materi terbagi ke dalam 12 bab yang mencakup spektrum luas pemodelan kontinu, diskrit, stokastik, dan persamaan diferensial parsial.</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -578,7 +588,7 @@
       <div class="flex items-center gap-4 text-slate-400">
         <a href="main.pdf" class="hover:text-white transition"><i class="fa-solid fa-file-pdf mr-1"></i> Draf PDF</a>
         <a href="#silabus" class="hover:text-white transition"><i class="fa-solid fa-table mr-1"></i> RPS</a>
-        <a href="https://github.com" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-github mr-1"></i> GitHub Pages</a>
+        <a href="https://github.com/cmdsi-info/pemodelan-matematika" target="_blank" rel="noopener noreferrer" class="hover:text-white transition"><i class="fa-brands fa-github mr-1"></i> Repositori GitHub</a>
       </div>
     </div>
   </footer>

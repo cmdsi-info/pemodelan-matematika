@@ -1,4 +1,5 @@
 \documentclass{bukumjh}
+\usepackage{longtable}
 
 \begin{document}
 
@@ -36,26 +37,35 @@ Setelah mengikuti perkuliahan ini, mahasiswa mampu:
 \end{enumerate}
 
 \section*{Bahan Kajian dan Rencana Pertemuan}
-\begin{tabularx}{\textwidth}{|c|X|p{2.5cm}|}
+\begingroup
+\small
+\setstretch{1.05}
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{|p{1.3cm}|p{6.4cm}|p{2.8cm}|}
 \hline
-{\jsg Week} & {\jsg Materi} & {\jsg Metode} \\ \hline
-1 & Pengantar pemodelan matematika: definisi, tipe model, langkah pemodelan. Contoh kasus sederhana (pertumbuhan populasi). & Ceramah, diskusi, latihan \\ \hline
-2 & Model pertumbuhan populasi: eksponensial, logistic. & Ceramah, diskusi, latihan \\ \hline
-3 & Model predator-prey Lotka–Volterra. & Ceramah, simulasi komputer \\ \hline
-4 & Model epidemiologi: SIR, SEIR. & Ceramah, simulasi komputer \\ \hline
-5 & Model antrian (queueing models). & Ceramah, diskusi, studi kasus \\ \hline
-6 & Rantai Markov: cuaca, produksi, permainan. & Ceramah, diskusi, simulasi \\ \hline
-7 & Model input-output Leontief dalam ekonomi. & Ceramah, diskusi, latihan \\ \hline
-{\jsg 8} & {\jsg Ujian Tengah Semester (UTS)} & {\jsg Tes tertulis} \\ \hline
-9 & Optimisasi: Linear Programming (transportasi, distribusi). & Ceramah, latihan \\ \hline
-10 & Difference equations dan model diskrit. & Ceramah, diskusi, simulasi \\ \hline
-11 & Model berbasis graf: transportasi, jaringan sosial. & Ceramah, studi kasus \\ \hline
-12 & Difusi panas dan penyebaran polutan (model PDE sederhana). & Ceramah, simulasi komputer \\ \hline
-13 & Agent-based modeling dan simulasi komputer. & Diskusi, praktek komputer \\ \hline
-14 & Mini project: perumusan model dari masalah nyata (per kelompok). & Presentasi, diskusi \\ \hline
-15 & Mini project: analisis dan interpretasi hasil model. & Presentasi, diskusi \\ \hline
-{\jsg 16} & {\jsg Ujian Akhir Semester (UAS)} & {\jsg Tes tertulis} \\ \hline
-\end{tabularx}
+{\jsg Minggu} & {\jsg Materi} & {\jsg Metode} \\ \hline
+\endfirsthead
+\hline
+{\jsg Minggu} & {\jsg Materi} & {\jsg Metode} \\ \hline
+\endhead
+01 & Pengantar Pemodelan: Definisi, klasifikasi, 6 langkah pemodelan, contoh populasi Malthus. & Ceramah \& Diskusi \\ \hline
+02 & Model Pertumbuhan Populasi: Eksponensial, Logistik, Carrying Capacity, Estimasi Parameter BPS. & Ceramah \& Latihan \\ \hline
+03 & Model Predator–Prey Lotka–Volterra: Titik kesetimbangan, linearisasi Jacobian, potret fase orbit tertutup. & Simulasi Komputer \\ \hline
+04 & Model Epidemiologi: Kompartemen SIR, reproduksi dasar $R_0$, fase puncak wabah, varian SEIR \& vaksinasi. & Simulasi Komputer \\ \hline
+05 & Model Antrian: Notasi Kendall, sistem Poisson $M/M/1$, multi-server $M/M/c$, dan performa sistem (Little's Law). & Studi Kasus Antrian \\ \hline
+06 & Model Stokastik \& Rantai Markov: Matriks transisi, sifat ergodik, distribusi stasioner jangka panjang. & Ceramah \& Simulasi \\ \hline
+07 & Model Input–Output Leontief: Matriks teknologi, invers Leontief $(I-A)^{-1}$, dampak pengganda ekonomi. & Ceramah \& Latihan \\ \hline
+08 & Ujian Tengah Semester (UTS) & Evaluasi Tertulis \\ \hline
+09 & Persamaan Beda \& Model Diskrit: Solusi orde 1 dan 2, kestabilan titik tetap, diagram cobweb, peta logistik kaos. & Ceramah \& Diskusi \\ \hline
+10 & Model Berbasis Graf \& Jaringan: Transportasi rute terpendek, aliran kapasitas jaringan, sentralitas sosial. & Studi Kasus Jaringan \\ \hline
+11 & Dinamika Hubungan Sosial (Pernikahan): Sistem persamaan diferensial nonlinier interaksi emosi pasangan. & Diskusi \& Analisis \\ \hline
+12 & Pemodelan Gelombang Linier: Tali bergetar, kondisi batas, pemisahan variabel, analisis deret Fourier. & Ceramah \& Simulasi \\ \hline
+13 & Gelombang Nonlinier: Penurunan persamaan KdV, penyeimbang dispersi-nonlinieritas, karakteristik soliton. & Ceramah \& Simulasi \\ \hline
+14 & Mini Project Pemodelan: Perumusan masalah riil dan pembentukan model matematis per kelompok. & Bimbingan \& Diskusi \\ \hline
+15 & Presentasi \& Kolokium Mini Project: Analisis numerik, validasi data riil, dan interpretasi kebijakan. & Presentasi Kelompok \\ \hline
+16 & Ujian Akhir Semester (UAS) & Laporan \& Ujian \\ \hline
+\end{longtable}
+\endgroup
 
 \section*{Referensi}
 \begin{enumerate}
@@ -2047,14 +2057,14 @@ Jika kedua syarat ini terpenuhi, rantai Markov bersifat {\jsg ergodik}, dan dist
 
 
 %=======================================================
-\chapter{Rantai Markov (Markov Chains)}
+\section{Pendalaman Rantai Markov dan Contoh Aplikasi}
 
-\section{Pendahuluan}
+\subsection{Pendahuluan}
 Banyak fenomena dalam dunia nyata bersifat stokastik: hasilnya tidak pasti, melainkan dipengaruhi oleh peluang. Salah satu kerangka matematis yang sederhana namun kuat untuk mempelajari fenomena stokastik adalah {\jsg rantai Markov} (Markov chain). 
 
 Konsep ini pertama kali diperkenalkan oleh matematikawan Rusia, Andrey A. Markov (1856–1922), untuk menganalisis ketergantungan antar huruf dalam teks puisi. Sejak saat itu, rantai Markov digunakan luas dalam ilmu komputer, ekonomi, biologi, dan rekayasa.
 
-\section{Definisi Rantai Markov}
+\subsection{Definisi Rantai Markov}
 Sebuah proses stokastik $\{X_n, n=0,1,2,\dots\}$ disebut {\jsg rantai Markov} jika memenuhi sifat {\jsg Markov}:
 \[
 P(X_{n+1} = j \mid X_n = i, X_{n-1},\dots,X_0) = P(X_{n+1} = j \mid X_n = i).
@@ -2062,7 +2072,7 @@ P(X_{n+1} = j \mid X_n = i, X_{n-1},\dots,X_0) = P(X_{n+1} = j \mid X_n = i).
 
 Artinya, peluang kondisi berikutnya hanya bergantung pada kondisi saat ini, bukan pada sejarah sebelumnya. 
 
-\section{Matriks Transisi}
+\subsection{Matriks Transisi}
 Rantai Markov didefinisikan oleh {\jsg matriks transisi} $P = (p_{ij})$:
 \[
 p_{ij} = P(X_{n+1}=j \mid X_n = i).
@@ -2083,20 +2093,20 @@ P = \begin{bmatrix}
 \]
 dengan state: 1 = cerah, 2 = hujan. Artinya, jika hari ini cerah, besok cerah lagi dengan peluang 0.7, dan hujan dengan peluang 0.3.
 
-\section{Distribusi Keadaan}
+\subsection{Distribusi Keadaan}
 Jika distribusi awal adalah $\pi^{(0)} = [\pi_1^{(0)}, \pi_2^{(0)}, \dots]$, maka distribusi pada langkah ke-$n$ adalah:
 \[
 \pi^{(n)} = \pi^{(0)} P^n.
 \]
 
-\section{Klasifikasi State}
+\subsection{Klasifikasi State}
 \begin{itemize}
     \item {\jsg State recurrent}: proses akan kembali ke state tersebut dengan probabilitas 1.
     \item {\jsg State transient}: ada probabilitas positif proses tidak pernah kembali.
     \item {\jsg State absorbing}: $p_{ii}=1$, artinya jika masuk ke state ini, proses tidak pernah keluar.
 \end{itemize}
 
-\section{Teorema Limit}
+\subsection{Teorema Limit}
 Jika rantai Markov irreducible dan aperiodik, maka ada distribusi stasioner $\pi$ sehingga:
 \[
 \pi = \pi P, \quad \sum_i \pi_i = 1.
@@ -2104,8 +2114,8 @@ Jika rantai Markov irreducible dan aperiodik, maka ada distribusi stasioner $\pi
 
 Distribusi stasioner menggambarkan proporsi jangka panjang waktu yang dihabiskan dalam setiap state.
 
-\section{Contoh Aplikasi}
-\subsection{Model Cuaca}
+\subsection{Contoh Aplikasi}
+\subsubsection{Model Cuaca}
 Misalkan cuaca hanya dua kemungkinan: cerah (C) dan hujan (H), dengan matriks transisi:
 \[
 P = \begin{bmatrix}
@@ -2119,13 +2129,13 @@ Jika hari ini cerah, maka peluang dua hari kemudian juga cerah:
 P(X_2=C \mid X_0=C) = (P^2)_{CC}.
 \]
 
-\subsection{Permainan Judi}
+\subsubsection{Permainan Judi}
 Dalam permainan sederhana, seorang pemain memiliki modal $i$. Setiap putaran, modal bertambah 1 dengan peluang $p$ atau berkurang 1 dengan peluang $q=1-p$. State $0$ dan $N$ adalah absorbing (kebangkrutan atau kemenangan). Rantai Markov digunakan untuk menghitung probabilitas kebangkrutan.
 
-\subsection{Produksi Mesin}
+\subsubsection{Produksi Mesin}
 Mesin bisa dalam kondisi baik (B) atau rusak (R). Peluang transisi: mesin baik tetap baik 0.9, rusak menjadi baik 0.6. Dengan Markov chain, kita dapat menghitung proporsi waktu mesin dalam kondisi rusak.
 
-\section{Contoh Numerik}
+\subsection{Contoh Numerik}
 Misalkan $P = \begin{bmatrix} 0.7 & 0.3 \\ 0.4 & 0.6 \end{bmatrix}$, distribusi awal $\pi^{(0)} = [1,0]$.
 
 \begin{itemize}
