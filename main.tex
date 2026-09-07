@@ -3338,40 +3338,81 @@ Dengan demikian, bab ini akan menunjukkan bagaimana persamaan nonlinier sederhan
 
 \section{Turunan Persamaan Korteweg--de Vries (KdV)}
 
-Untuk memahami asal-usul persamaan KdV, kita mulai dari model gelombang air dangkal. 
-Kita anggap sebuah kanal panjang dengan kedalaman rata-rata $h_0$, dan $u(x,t)$ menyatakan ketinggian permukaan air dari keadaan keseimbangan pada posisi $x$ dan waktu $t$. 
-Tujuan kita adalah menemukan persamaan diferensial parsial yang menggambarkan dinamika $u(x,t)$.
+KdV adalah model asimtotik untuk gelombang gravitasi permukaan pada kanal lurus. Penurunan berikut berlaku untuk gelombang panjang, beramplitudo kecil tetapi tidak infinitesimal, yang terutama merambat ke satu arah.
 
-\subsection*{Asumsi Dasar}
-Beberapa asumsi penting dalam penurunan persamaan KdV adalah:
-\begin{enumerate}
-  \item Kedalaman air $h_0$ jauh lebih kecil dibandingkan panjang gelombang, sehingga disebut \emph{gelombang air dangkal}.
-  \item Amplitudo gelombang relatif kecil dibandingkan kedalaman air, namun cukup besar sehingga efek nonlinier tidak dapat diabaikan.
-  \item Viskositas dan gesekan diabaikan, sehingga aliran dianggap ideal.
-\end{enumerate}
-
-\subsection*{Persamaan Dasar}
-Dari mekanika fluida, gerakan fluida ideal dapat dijelaskan dengan persamaan Euler dan persamaan kontinuitas. 
-Untuk kasus aliran satu dimensi sederhana, keduanya dapat diperkirakan dalam bentuk yang lebih sederhana. 
-Dengan melakukan ekspansi asimtotik (menggunakan metode skala), akhirnya diperoleh bahwa permukaan air $u(x,t)$ mengikuti persamaan:
+\subsection{Model Fluida Ideal dan Kondisi Batas}
+Ambil sumbu $x$ sepanjang kanal dan $z$ ke atas. Dasar kanal berada pada $z=-h_0$, sedangkan muka bebas berada pada $z=\eta(x,t)$. Aliran dianggap tak-mampat, tak-berputar, dan tanpa viskositas. Maka terdapat potensial kecepatan $\phi(x,z,t)$ dengan $\boldsymbol{v}=\nabla\phi$, serta
 \[
-\frac{\partial u}{\partial t} 
-+ c_0 \frac{\partial u}{\partial x} 
-+ \alpha u \frac{\partial u}{\partial x} 
-+ \beta \frac{\partial^3 u}{\partial x^3} = 0,
+\phi_{xx}+\phi_{zz}=0, \qquad -h_0<z<\eta(x,t),
 \]
-dengan:
-\begin{itemize}
-  \item $c_0 = \sqrt{g h_0}$ adalah kecepatan rambat gelombang linier pada air dangkal,
-  \item $\alpha$ adalah koefisien nonlinier yang bergantung pada kedalaman,
-  \item $\beta$ adalah koefisien dispersi yang bergantung pada kedalaman.
-\end{itemize}
+\[
+\phi_z=0 \quad (z=-h_0),
+\]
+\[
+\eta_t+\phi_x\eta_x=\phi_z \quad (z=\eta),
+\]
+\[
+\phi_t+\frac12\left(\phi_x^2+\phi_z^2\right)+g\eta=0 \quad (z=\eta).
+\]
+Keempat persamaan tersebut adalah persamaan Laplace, kondisi kedap di dasar, kondisi kinematik pada muka bebas, dan persamaan Bernoulli pada muka bebas bertekanan atmosfer.
 
-\subsection*{Normalisasi ke Persamaan KdV}
-Dengan melakukan perubahan skala waktu, ruang, dan amplitudo, persamaan di atas dapat disederhanakan ke dalam bentuk kanonik yang dikenal sebagai \textbf{persamaan Korteweg--de Vries (KdV)}:
+\subsection{Skala Gelombang Panjang dan Ekspansi Potensial}
+Misalkan $a$ adalah amplitudo khas dan $l$ panjang gelombang khas. Definisikan
+\[
+\epsilon=\frac{a}{h_0}, \qquad \delta=\frac{h_0^2}{l^2}.
+\]
+Rezim KdV adalah keseimbangan Boussinesq $\epsilon=O(\delta)=O(\mu)$, dengan $0<\mu\ll1$. Jadi, koreksi nonlinier dan koreksi dispersif dipertahankan pada orde yang sama. Dengan memakai kondisi dasar, solusi persamaan Laplace dapat diekspansi sebagai
+\[
+\phi(x,z,t)=F(x,t)-\frac{(z+h_0)^2}{2}F_{xx}+\frac{(z+h_0)^4}{24}F_{xxxx}+\cdots.
+\]
+Suku kedua dan berikutnya menghasilkan dispersi; menghapus semuanya akan menghasilkan teori air dangkal nondispersif yang tidak mendukung soliton.
+
+\subsection{Sistem Boussinesq Orde Pertama}
+Masukkan ekspansi potensial ke kondisi muka bebas dan gunakan $X=x/l$, $T=c_0t/l$, $H=\eta/a$, dengan $c_0=\sqrt{gh_0}$. Sampai orde $O(\mu)$, untuk kecepatan horizontal tak berdimensi $U$, diperoleh
+\[
+H_T+U_X+\mu(HU)_X=0,
+\]
+\[
+U_T+H_X+\mu U U_X-\frac{\mu}{3}U_{XXT}=0.
+\]
+Persamaan pertama menyatakan kekekalan massa. Pada persamaan kedua, $UU_X$ berasal dari percepatan konvektif, sedangkan $-\frac{\mu}{3}U_{XXT}$ adalah koreksi dispersif.
+
+\subsection{Reduksi ke Gelombang yang Bergerak ke Kanan}
+Untuk gelombang linier ke kanan, $U\approx H$ dan profil utama bergantung pada $X-T$. Gunakan
+\[
+\xi=X-T, \qquad \tau=\mu T, \qquad U=H+\mu U_1+O(\mu^2),
+\]
+sehingga $\partial_T=-\partial_\xi+\mu\partial_\tau$ dan $\partial_X=\partial_\xi$. Dengan mengumpulkan suku orde $\mu$, persamaan massa dan momentum berturut-turut memberi
+\[
+H_\tau+(U_1)_\xi+2HH_\xi=0,
+\]
+\[
+H_\tau-(U_1)_\xi+HH_\xi+\frac13H_{\xi\xi\xi}=0.
+\]
+Menjumlahkan keduanya menghilangkan koreksi $U_1$:
+\[
+2H_\tau+3HH_\xi+\frac13H_{\xi\xi\xi}=0,
+\]
+atau
+\[
+H_\tau+\frac32HH_\xi+\frac16H_{\xi\xi\xi}=0.
+\]
+
+\subsection{Bentuk Dimensional dan Normalisasi}
+Mengembalikan satuan menghasilkan KdV dimensional bagi elevasi muka bebas:
+\[
+\eta_t+c_0\eta_x+\frac{3c_0}{2h_0}\eta\eta_x+\frac{c_0h_0^2}{6}\eta_{xxx}=0,
+\qquad c_0=\sqrt{gh_0}.
+\]
+Dalam kerangka yang bergerak bersama $c_0$, tulis persamaan sebagai $\eta_T+a\eta\eta_X+b\eta_{XXX}=0$, dengan $a=\frac{3c_0}{2h_0}$ dan $b=\frac{c_0h_0^2}{6}$. Perubahan skala
+\[
+\eta=\frac{6b}{aL^2}u, \qquad \xi=\frac{X}{L}, \qquad \tau=\frac{bT}{L^3}
+\]
+memberikan bentuk standar
 \begin{equation}
-\frac{\partial u}{\partial t} + 6u \frac{\partial u}{\partial x} + \frac{\partial^3 u}{\partial x^3} = 0.
+u_\tau+6u u_\xi+u_{\xi\xi\xi}=0.
 \end{equation}
+Koefisien $6$ dan $1$ adalah hasil normalisasi, bukan konstanta fisik baru.
 
 \subsection*{Makna Fisik}
 Persamaan KdV menunjukkan adanya dua efek utama:
