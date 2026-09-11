@@ -10,3 +10,6 @@ _minted*/
 *.snm
 *.vrb
 *.lyx~
+node_modules/
+.slidev/
+dist/
